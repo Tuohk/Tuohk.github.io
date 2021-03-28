@@ -1,0 +1,494 @@
+
+<!DOCTYPE html>
+<html lang="en" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>数据类型 - 小宇子的博客哟</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <meta name="keywords" content="TriDiamond Obsidian,"> 
+    <meta name="description" content="JavaScript中什么是基本数据类型什么是引用类型？以及各个数据类型是如何存储的？基本数据类型有：U ARE SO NBU(undefined) S(string symbol) N(null ,"> 
+    <meta name="author" content="Yogae"> 
+    <link rel="alternative" href="atom.xml" title="小宇子的博客哟" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.png"> 
+    
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1429596_nzgqgvnmkjb.css">
+
+    
+<link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.7.2/animate.min.css">
+
+    
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
+
+    
+<link rel="stylesheet" href="//cdn.bootcss.com/codemirror/5.48.4/codemirror.min.css">
+
+    
+<link rel="stylesheet" href="//cdn.bootcss.com/codemirror/5.48.4/theme/dracula.css">
+
+    
+<link rel="stylesheet" href="/css/obsidian.css">
+
+    
+<link rel="stylesheet" href="/css/ball-atom.min.css">
+
+    
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+
+<body class="loading">
+    <div class="loader">
+        <div class="la-ball-atom la-2x">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <span id="config-title" style="display:none">小宇子的博客哟</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div class="scrollbar gradient-bg-rev"></div>
+<div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <div class="navigation animated fadeIn fast delay-1s">
+        <img id="home-icon" class="icon-home" src="/img/favicon.png" alt="" data-url="http://example.com">
+        <div id="play-icon" title="Play/Pause" class="iconfont icon-play"></div>
+        <h3 class="subtitle">数据类型</h3>
+        <div class="social">
+            <!--        <div class="like-icon">-->
+            <!--            <a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
+            <!--        </div>-->
+            <div>
+                <div class="share">
+                    
+                        <a href="javascript:;" class="iconfont icon-share1"></a>
+                        <div class="share-component-cc" data-disabled="facebook,douban,linkedin,diandian,tencent,google"></div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="section">
+        <div class=article-header-wrapper>
+    <div class="article-header">
+        <div class="article-cover animated fadeIn" style="
+            animation-delay: 600ms;
+            animation-duration: 1.2s;
+            background-image: 
+                radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.65), #100e17),
+                url(/img/cover.jpg) ">
+        </div>
+        <div class="else">
+            <p class="animated fadeInDown">
+                
+                <a href="javascript:;"><b>「 </b>Article<b> 」</b></a>
+                
+                March 01, 2021
+            </p>
+            <h3 class="post-title animated fadeInDown"><a href="/2021/03/01/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" title="数据类型" class="">数据类型</a>
+            </h3>
+            
+            <p class="post-count animated fadeInDown">
+                
+                <span>
+                    <b class="iconfont icon-text2"></b> <i>Words count</i>
+                    4.5k
+                </span>
+                
+                
+                <span>
+                    <b class="iconfont icon-timer__s"></b> <i>Reading time</i>
+                    4 mins.
+                </span>
+                
+                
+                
+                <span id="busuanzi_container_page_pv">
+                    <b class="iconfont icon-read"></b> <i>Read count</i>
+                    <span id="busuanzi_value_page_pv">0</span>
+                </span>
+                
+            </p>
+            
+            
+            <ul class="animated fadeInDown post-tags-list" itemprop="keywords"><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
+            
+        </div>
+    </div>
+</div>
+
+<div class="screen-gradient-after">
+    <div class="screen-gradient-content">
+        <div class="screen-gradient-content-inside">
+            <div class="bold-underline-links screen-gradient-sponsor">
+                <p>
+                    <span class="animated fadeIn delay-1s"></span>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="article">
+    <div class='main'>
+        <div class="content markdown animated fadeIn">
+            <h2 id="JavaScript中什么是基本数据类型什么是引用类型？以及各个数据类型是如何存储的？"><a href="#JavaScript中什么是基本数据类型什么是引用类型？以及各个数据类型是如何存储的？" class="headerlink" title="JavaScript中什么是基本数据类型什么是引用类型？以及各个数据类型是如何存储的？"></a>JavaScript中什么是基本数据类型什么是引用类型？以及各个数据类型是如何存储的？</h2><p>基本数据类型有：U ARE SO NB<br>U(undefined) S(string symbol) N(null number) B(boolean BigInt)<br>引用类型统称为Object类型<br>细分的话有：Object,array,date,RegExp,Function<br>基本数据类型的数据直接存储在栈中，而引用数据类型是存储在堆中,每个对象在栈地址都会有一个引用地址，引用类型在栈空间都会保存自己的引用地址，以便快速找到堆内存中的对象。栈内存是自动分配内存的。而堆内存是动态分配内存的，不会自动释放，所以每次使用完对象的时候都要将它设置为NULL ,从而减少无用内存的消耗</p>
+<hr>
+<h1 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h1><h2 id="在JavaScript中为什么0-2-0-1-gt-0-3"><a href="#在JavaScript中为什么0-2-0-1-gt-0-3" class="headerlink" title="在JavaScript中为什么0.2+0.1&gt;0.3?"></a>在JavaScript中为什么0.2+0.1&gt;0.3?</h2><p>因为在JavaScript中，浮点数是由64位固定长度来表示的，其中1位表示符号位，11位表示指数位，剩下的52位表示尾数位，由于只有52位尾数位，而0.1转为二进制时是0.0001100110011001100…（1100循环）</p>
+<hr>
+<h3 id="十进制转二进制方法：这里插入一个地址谢谢！！！"><a href="#十进制转二进制方法：这里插入一个地址谢谢！！！" class="headerlink" title="十进制转二进制方法：这里插入一个地址谢谢！！！"></a>十进制转二进制方法：这里插入一个地址谢谢！！！</h3><p>由于只能存储52位尾数位，所以便存在精度缺失，把它从内存中取出来转换成十进制就不是原来的0.1了，变成0.10000000…555111。<br>而0.2+0.1是因为0.2和0.1都转换为二进制进行计算，转换为十进制正好是0.30000…004</p>
+<hr>
+<h2 id="这时候面试官又会说了-那为什么0-2-0-3-0-5捏？？？"><a href="#这时候面试官又会说了-那为什么0-2-0-3-0-5捏？？？" class="headerlink" title="这时候面试官又会说了 那为什么0.2+0.3=0.5捏？？？"></a>这时候面试官又会说了 那为什么0.2+0.3=0.5捏？？？</h2><p>嗯？因为0.2和0.3先转化为二进制进行计算，结果是0.10000…001 这时候1的尾数是大于52位，而实际数取值是取52位尾数位的！因此截取后便是0.5</p>
+<hr>
+<h2 id="这时候面试官还是那么可爱-又问既然0-1不是0-1了-那为什么输出console-log-0-1-的时候还是0-1呢？"><a href="#这时候面试官还是那么可爱-又问既然0-1不是0-1了-那为什么输出console-log-0-1-的时候还是0-1呢？" class="headerlink" title="这时候面试官还是那么可爱 又问既然0.1不是0.1了!那为什么输出console.log(0.1)的时候还是0.1呢？"></a>这时候面试官还是那么可爱 又问既然0.1不是0.1了!那为什么输出console.log(0.1)的时候还是0.1呢？</h2><p>这里其实我也不懂,正确答案：在console.log的时候会二进制转换为十进制，十进制会转换为字符串形式，在转换过程中会取近似值，所以打印出来的是一个近似值的字符串！哦耶~</p>
+<hr>
+<h2 id="判断数据类型有几种方法？-四种"><a href="#判断数据类型有几种方法？-四种" class="headerlink" title="判断数据类型有几种方法？//四种"></a>判断数据类型有几种方法？//四种</h2><p>最常用的判断方法：typeof</p>
+<p>缺点：typeof null的值为object 无法分辨是null还是object</p>
+<pre><code class="bash">
+</code></pre>
+<p>判断已知对象的方法：instanceof</p>
+<p>缺点：无法判断对象是否存在自己的原型链上</p>
+<pre><code class="bash">
+</code></pre>
+<p>根据对象的construct判断：<br>注意：construct在类继承时会出错</p>
+<pre><code class="bash">
+</code></pre>
+<p>通用但很繁琐的方法：object.prototype.toString.call()</p>
+<pre><code class="bash">
+</code></pre>
+<hr>
+<h2 id="instanceof原理"><a href="#instanceof原理" class="headerlink" title="instanceof原理"></a>instanceof原理</h2><p>instanceof就是查找目标对象的原型链</p>
+<hr>
+<h2 id="为什么typeof-null是object"><a href="#为什么typeof-null是object" class="headerlink" title="为什么typeof null是object"></a>为什么typeof null是object</h2><p>这其实是个BUG，因为在JavaScript中，不同对象都是用二进制存储的，如果二进制前三位数为0的话，系统会判断为object类型，而null的前三位数刚好是0，所以也变成了object类型</p>
+<hr>
+<h2 id="和-有什么区别？"><a href="#和-有什么区别？" class="headerlink" title="==  和 ===  有什么区别？"></a>==  和 ===  有什么区别？</h2><h4 id="是严格意义上的相等，会比较数据类型和值大小"><a href="#是严格意义上的相等，会比较数据类型和值大小" class="headerlink" title="===是严格意义上的相等，会比较数据类型和值大小"></a>===是严格意义上的相等，会比较数据类型和值大小</h4><p>数据类型不同，返回flase<br>数据类型相同，但值大小不同，返回flase</p>
+<h4 id="是非严格意义上的相等，会比较值的大小"><a href="#是非严格意义上的相等，会比较值的大小" class="headerlink" title="==是非严格意义上的相等，会比较值的大小"></a>==是非严格意义上的相等，会比较值的大小</h4><p>数据类型相同，比较值大小<br>数据类型不同，会根据以下表格，再进一步比较。</p>
+<pre><code>    Null == undefined -&gt; true
+    String == Number -&gt; 先将String转换为Number，再比较大小
+    Boolean == Number -&gt; 先将Boolean转换为Number，再比较大小
+    Object == String,Number,Symbol -&gt; Object转换为原始类型
+</code></pre>
+<hr>
+<h2 id="手写call，apply，bind"><a href="#手写call，apply，bind" class="headerlink" title="手写call，apply，bind"></a>手写call，apply，bind</h2><h3 id="本宝宝暂时不会，过两天学完来补上嘻嘻嘻🤭"><a href="#本宝宝暂时不会，过两天学完来补上嘻嘻嘻🤭" class="headerlink" title="本宝宝暂时不会，过两天学完来补上嘻嘻嘻🤭"></a>本宝宝暂时不会，过两天学完来补上嘻嘻嘻🤭</h3><hr>
+<h2 id="字面量创建对象和new创建对象有什么区别，new内部都实现了什么，手写一个new"><a href="#字面量创建对象和new创建对象有什么区别，new内部都实现了什么，手写一个new" class="headerlink" title="字面量创建对象和new创建对象有什么区别，new内部都实现了什么，手写一个new"></a>字面量创建对象和new创建对象有什么区别，new内部都实现了什么，手写一个new</h2><h3 id="字面量："><a href="#字面量：" class="headerlink" title="字面量："></a>字面量：</h3><p>字面量创建对象更简单，方便阅读<br>不需要作用解析，速度更快</p>
+<pre><code>    let person = &#123;
+        name : &#39;小宇子&#39;,
+        age : &#39;21&#39;,
+        loc : &#39;汕头&#39;,
+        skill : function()&#123;
+            alert(&#39;唱跳RAP&#39;);
+        &#125;
+    &#125;
+    console.log(function.skill());
+</code></pre>
+<h3 id="new创建对象："><a href="#new创建对象：" class="headerlink" title="new创建对象："></a>new创建对象：</h3><p>创建一个new对象<br>不懂了回去补知识。。。！！！</p>
+<hr>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls"
+                data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+            <ul id="audio-list" style="display:none">
+                
+                
+                <li title='0' data-url='/statics/chengdu.mp3'></li>
+                
+                    
+            </ul>
+            
+            
+            <div class="post-nav">
+                <hr>
+                
+                    <div class="post-nav-item">Previous Post:<a href="/2021/03/01/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" rel="prev" 
+                        title="计算机网络">计算机网络
+                      </a></div>
+                
+                
+                    <div class="post-nav-item">Next Post:<a href="/2021/02/21/post-title-with-whitespace/" rel="next" 
+                        title="post title with whitespace">post title with whitespace</a></div>
+                                
+            </div>   
+                        
+            
+            
+    <div id='gitalk-container' class="comment link"
+        data-ae='true'
+        data-ci='ec894e2b66f752e8b7fb'
+        data-cs='3ccc2e92bb350688fe2c2dc2930189b62622bfb1'
+        data-r='blog-comments'
+        data-o='TriDiamond'
+        data-a='TriDiamond'
+        data-d=''
+    >Comments</div>
+
+
+            
+            
+        </div>
+        <div class="sidebar">
+            <div class="box animated fadeInRight">
+                <div class="subbox">
+                    <img src="https://res.cloudinary.com/tridiamond/image/upload/v1573019751/TriDiamond_logo_ui_xeublz.jpg" height=300 width=300></img>
+                    <p>Yogae</p>
+                    <span>Think like an artist, develop like an artisan</span>
+                    <dl>
+                        <dd><a href="https://github.com/TriDiamond" target="_blank"><span
+                                    class=" iconfont icon-github"></span></a></dd>
+                        <dd><a href="https://twitter.com/TriDiamond6" target="_blank"><span
+                                    class=" iconfont icon-twitter"></span></a></dd>
+                        <dd><a href="https://stackoverflow.com/users/7602324/tridiamond?tab=profile" target="_blank"><span
+                                    class=" iconfont icon-stack-overflow"></span></a></dd>
+                    </dl>
+                </div>
+                <ul>
+                    <li><a href="/">5 <p>Articles</p></a></li>
+                    <li><a href="/categories">0 <p>Categories</p></a></li>
+                    <li><a href="/tags">1 <p>Tags</p></a></li>
+                </ul>
+            </div>
+            
+            
+            
+            <div class="box sticky animated fadeInRight faster">
+                <div id="toc" class="subbox">
+                    <h4>Contents</h4>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#JavaScript%E4%B8%AD%E4%BB%80%E4%B9%88%E6%98%AF%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E4%BB%80%E4%B9%88%E6%98%AF%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B%EF%BC%9F%E4%BB%A5%E5%8F%8A%E5%90%84%E4%B8%AA%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E6%98%AF%E5%A6%82%E4%BD%95%E5%AD%98%E5%82%A8%E7%9A%84%EF%BC%9F"><span class="toc-number">1.</span> <span class="toc-text">JavaScript中什么是基本数据类型什么是引用类型？以及各个数据类型是如何存储的？</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2"><span class="toc-number"></span> <span class="toc-text">类型转换</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9C%A8JavaScript%E4%B8%AD%E4%B8%BA%E4%BB%80%E4%B9%880-2-0-1-gt-0-3"><span class="toc-number">1.</span> <span class="toc-text">在JavaScript中为什么0.2+0.1&gt;0.3?</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%81%E8%BF%9B%E5%88%B6%E8%BD%AC%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%96%B9%E6%B3%95%EF%BC%9A%E8%BF%99%E9%87%8C%E6%8F%92%E5%85%A5%E4%B8%80%E4%B8%AA%E5%9C%B0%E5%9D%80%E8%B0%A2%E8%B0%A2%EF%BC%81%EF%BC%81%EF%BC%81"><span class="toc-number">1.1.</span> <span class="toc-text">十进制转二进制方法：这里插入一个地址谢谢！！！</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%99%E6%97%B6%E5%80%99%E9%9D%A2%E8%AF%95%E5%AE%98%E5%8F%88%E4%BC%9A%E8%AF%B4%E4%BA%86-%E9%82%A3%E4%B8%BA%E4%BB%80%E4%B9%880-2-0-3-0-5%E6%8D%8F%EF%BC%9F%EF%BC%9F%EF%BC%9F"><span class="toc-number">2.</span> <span class="toc-text">这时候面试官又会说了 那为什么0.2+0.3&#x3D;0.5捏？？？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%99%E6%97%B6%E5%80%99%E9%9D%A2%E8%AF%95%E5%AE%98%E8%BF%98%E6%98%AF%E9%82%A3%E4%B9%88%E5%8F%AF%E7%88%B1-%E5%8F%88%E9%97%AE%E6%97%A2%E7%84%B60-1%E4%B8%8D%E6%98%AF0-1%E4%BA%86-%E9%82%A3%E4%B8%BA%E4%BB%80%E4%B9%88%E8%BE%93%E5%87%BAconsole-log-0-1-%E7%9A%84%E6%97%B6%E5%80%99%E8%BF%98%E6%98%AF0-1%E5%91%A2%EF%BC%9F"><span class="toc-number">3.</span> <span class="toc-text">这时候面试官还是那么可爱 又问既然0.1不是0.1了!那为什么输出console.log(0.1)的时候还是0.1呢？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%A4%E6%96%AD%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E6%9C%89%E5%87%A0%E7%A7%8D%E6%96%B9%E6%B3%95%EF%BC%9F-%E5%9B%9B%E7%A7%8D"><span class="toc-number">4.</span> <span class="toc-text">判断数据类型有几种方法？&#x2F;&#x2F;四种</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#instanceof%E5%8E%9F%E7%90%86"><span class="toc-number">5.</span> <span class="toc-text">instanceof原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88typeof-null%E6%98%AFobject"><span class="toc-number">6.</span> <span class="toc-text">为什么typeof null是object</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%92%8C-%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB%EF%BC%9F"><span class="toc-number">7.</span> <span class="toc-text">&#x3D;&#x3D;  和 &#x3D;&#x3D;&#x3D;  有什么区别？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%89%8B%E5%86%99call%EF%BC%8Capply%EF%BC%8Cbind"><span class="toc-number">8.</span> <span class="toc-text">手写call，apply，bind</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%AC%E5%AE%9D%E5%AE%9D%E6%9A%82%E6%97%B6%E4%B8%8D%E4%BC%9A%EF%BC%8C%E8%BF%87%E4%B8%A4%E5%A4%A9%E5%AD%A6%E5%AE%8C%E6%9D%A5%E8%A1%A5%E4%B8%8A%E5%98%BB%E5%98%BB%E5%98%BB%F0%9F%A4%AD"><span class="toc-number">8.1.</span> <span class="toc-text">本宝宝暂时不会，过两天学完来补上嘻嘻嘻🤭</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E9%9D%A2%E9%87%8F%E5%88%9B%E5%BB%BA%E5%AF%B9%E8%B1%A1%E5%92%8Cnew%E5%88%9B%E5%BB%BA%E5%AF%B9%E8%B1%A1%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB%EF%BC%8Cnew%E5%86%85%E9%83%A8%E9%83%BD%E5%AE%9E%E7%8E%B0%E4%BA%86%E4%BB%80%E4%B9%88%EF%BC%8C%E6%89%8B%E5%86%99%E4%B8%80%E4%B8%AAnew"><span class="toc-number">9.</span> <span class="toc-text">字面量创建对象和new创建对象有什么区别，new内部都实现了什么，手写一个new</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%97%E9%9D%A2%E9%87%8F%EF%BC%9A"><span class="toc-number">9.1.</span> <span class="toc-text">字面量：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#new%E5%88%9B%E5%BB%BA%E5%AF%B9%E8%B1%A1%EF%BC%9A"><span class="toc-number">9.2.</span> <span class="toc-text">new创建对象：</span></a></li></ol></li></ol>
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+</div>
+
+    </div>
+</div>
+    <div id="back-to-top" class="animated fadeIn faster">
+        <div class="flow"></div>
+        <span class="percentage animated fadeIn faster">0%</span>
+        <span class="iconfont icon-top02 animated fadeIn faster"></span>
+    </div>
+</body>
+<footer>
+    <p class="copyright" id="copyright">
+        &copy; 2021
+        <span class="gradient-text">
+            Yogae
+        </span>.
+        Powered by <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a>
+        Theme
+        <span class="gradient-text">
+            <a href="https://github.com/TriDiamond/hexo-theme-obsidian" title="Obsidian" target="_blank" rel="noopener">Obsidian</a>
+        </span>
+        <small><a href="https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/CHANGELOG.md" title="v1.4.5" target="_blank" rel="noopener">v1.4.5</a></small>
+    </p>
+</footer>
+
+<script type="text/javascript" src="https://cdn.bootcss.com/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script>
+  MathJax.Hub.Config({
+    "HTML-CSS": {
+      preferredFont: "TeX",
+      availableFonts: ["STIX", "TeX"],
+      linebreaks: {
+        automatic: true
+      },
+      EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+      inlineMath: [
+        ["$", "$"],
+        ["\\(", "\\)"]
+      ],
+      processEscapes: true,
+      ignoreClass: "tex2jax_ignore|dno",
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      noUndefined: {
+        attributes: {
+          mathcolor: "red",
+          mathbackground: "#FFEEEE",
+          mathsize: "90%"
+        }
+      },
+      Macros: {
+        href: "{}"
+      }
+    },
+    messageStyle: "none"
+  });
+</script>
+<script>
+  function initialMathJax() {
+    MathJax.Hub.Queue(function () {
+      var all = MathJax.Hub.getAllJax(),
+        i;
+      // console.log(all);
+      for (i = 0; i < all.length; i += 1) {
+        console.log(all[i].SourceElement().parentNode)
+        all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+    });
+  }
+
+  function reprocessMathJax() {
+    if (typeof MathJax !== 'undefined') {
+      MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+    }
+  }
+</script>
+
+
+ 
+<link rel="stylesheet" href="//cdn.bootcss.com/gitalk/1.5.0/gitalk.min.css">
+ 
+<script src="//cdn.bootcss.com/gitalk/1.5.0/gitalk.min.js"></script>
+  
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/obsidian.js"></script>
+<script src="/js/jquery.truncate.js"></script>
+<script src="/js/search.js"></script>
+ 
+<script src="//cdn.bootcss.com/typed.js/2.0.10/typed.min.js"></script>
+ 
+<script src="//cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script>
+ 
+<script src="//cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+
+<script src="https://cdn.bootcss.com/codemirror/5.48.4/codemirror.min.js"></script>
+ 
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/javascript/javascript.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/css/css.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/xml/xml.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/htmlmixed/htmlmixed.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/clike/clike.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/php/php.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/shell/shell.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/python/python.min.js"></script>
+   
+<script src="/js/busuanzi.min.js"></script>
+
+<script>
+  $(document).ready(function () {
+    if ($('span[id^="busuanzi_"]').length) {
+      initialBusuanzi();
+    }
+  });
+</script>
+ 
+<link rel="stylesheet" href="//cdn.bootcss.com/photoswipe/4.1.3/photoswipe.min.css">
+<link rel="stylesheet" href="//cdn.bootcss.com/photoswipe/4.1.3/default-skin/default-skin.min.css">
+
+
+<script src="//cdn.bootcss.com/photoswipe/4.1.3/photoswipe.min.js"></script>
+<script src="//cdn.bootcss.com/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+ 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="//www.googletagmanager.com/gtag/js?id=UA-149874671-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+
+  gtag('config', 'UA-149874671-1');
+</script>
+ 
+
+<script>
+  function initialTyped() {
+    var typedTextEl = $('.typed-text');
+    if (typedTextEl && typedTextEl.length > 0) {
+      var typed = new Typed('.typed-text', {
+        strings: ['Think like an artist, develop like an artisan', '艺术家思维去思考问题，工匠创造精神去开发'],
+        typeSpeed: 90,
+        loop: true,
+        loopCount: Infinity,
+        backSpeed: 20,
+      });
+    }
+  }
+
+  if ($('.article-header') && $('.article-header').length) {
+    $(document).ready(function () {
+      initialTyped();
+    });
+  }
+</script>
+
+
+
+
+ <!-- 例：百度统计 --> <script> var _hmt = _hmt || []; (function() { var hm = document.createElement("script"); hm.src = "https://hm.baidu.com/hm.js?your_code"; var s = document.getElementsByTagName("script")[0];  s.parentNode.insertBefore(hm, s); })(); </script> 
+
+</html>
