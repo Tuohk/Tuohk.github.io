@@ -9,7 +9,7 @@
     
     <title>
         
-            计算机网络 |
+            生活碎片 |
         
         Yogae Blog
     </title>
@@ -72,7 +72,7 @@
                         </li>
                     
                         <li class="menu-item">
-                            <a class=""
+                            <a class="active"
                                href="/life"
                             >
                                 生活
@@ -119,7 +119,7 @@
                 </li>
             
                 <li class="drawer-menu-item flex-center">
-                    <a class=""
+                    <a class="active"
                        href="/life">生活</a>
                 </li>
             
@@ -144,100 +144,35 @@
 
                 
                     <div class="fade-in-down-animation">
-    <div class="article-content-container">
-
-        <div class="article-title">
-            <span class="title-hover-animation">计算机网络</span>
+    <div class="page-template-container">
+        
+        
+        <div class="page-template-content markdown-body">
+            
+                <h3 id="3-6-内容协商返回最合适的内容"><a href="#3-6-内容协商返回最合适的内容" class="headerlink" title="3.6 内容协商返回最合适的内容"></a>3.6 内容协商返回最合适的内容</h3><p>内容协商机制是指客户端和服务器端就响应的资源进行协商，提供给客户端最适合的资源</p>
+<p>以响应资源的语音，字符集，编码方式作为判断的基准</p>
+<p>内容协商有三种技术：</p>
+<p>1.服务器驱动协商</p>
+<p>2.客户端驱动协商</p>
+<p>3.透明协商</p>
+<h3 id="4-1-状态码告知从服务器端返回的请求结果"><a href="#4-1-状态码告知从服务器端返回的请求结果" class="headerlink" title="4.1 状态码告知从服务器端返回的请求结果"></a>4.1 状态码告知从服务器端返回的请求结果</h3><p>1XX 信息性状态码 接受的请求正在处理</p>
+<p>2XX 成功状态码 请求正常处理完毕</p>
+<p>3XX 重定向状态码 需要附加操作以完成请求</p>
+<p>4XX 客户端错误状态码 服务器无法处理请求</p>
+<p>5XX 服务器错误状态码 服务器处理请求出错</p>
+<h3 id="4-2-2XX-成功"><a href="#4-2-2XX-成功" class="headerlink" title="4.2 2XX 成功"></a>4.2 2XX 成功</h3><p>2XX 的响应结果表明请求被正常处理</p>
+<h4 id="4-2-1-200-OK"><a href="#4-2-1-200-OK" class="headerlink" title="4.2.1 200 OK"></a>4.2.1 200 OK</h4><p>表示客户端发来的请求被服务器端正常处理</p>
+<h4 id="4-2-2-204-No-Content"><a href="#4-2-2-204-No-Content" class="headerlink" title="4.2.2 204 No Content"></a>4.2.2 204 No Content</h4><p>表示客户端发来的请求被服务器正常处理，但是请求无资源返回</p>
+<h4 id="4-2-3-206-Partial-Content"><a href="#4-2-3-206-Partial-Content" class="headerlink" title="4.2.3 206 Partial Content"></a>4.2.3 206 Partial Content</h4><p>表示客户端进行了范围请求，服务器端正常处理了这部分的 GET 请求</p>
+<h4 id="4-3-3XX-重定向"><a href="#4-3-3XX-重定向" class="headerlink" title="4.3 3XX 重定向"></a>4.3 3XX 重定向</h4><p>3XX 的响应结果表明浏览器需要执行某些特殊的处理来正确处理请求</p>
+<h4 id="4-3-1-301-Move-Permanently"><a href="#4-3-1-301-Move-Permanently" class="headerlink" title="4.3.1 301 Move Permanently"></a>4.3.1 301 Move Permanently</h4><p>永久性重定向</p>
+<h4 id="4-3-2-302"><a href="#4-3-2-302" class="headerlink" title="4.3.2 302"></a>4.3.2 302</h4><p>临时重定向</p>
+<h4 id="4-3-3-303-See-other"><a href="#4-3-3-303-See-other" class="headerlink" title="4.3.3 303 See other"></a>4.3.3 303 See other</h4>
+            
         </div>
-
-        
-            <div class="article-header">
-                <div class="avatar">
-                    <img src="/images/logo.svg">
-                </div>
-                <div class="info">
-                    <div class="author">
-                        <span class="name">Yogae</span>
-                        
-                            <span class="author-label">健身狂魔</span>
-                        
-                    </div>
-                    <div class="meta-info">
-                        <div class="article-meta-info">
-    <span class="article-date article-meta-item">
-        <i class="fas fa-edit"></i>&nbsp;2021-03-01 23:55:54
-    </span>
-    
-    
-
-    
-    
-        <span class="article-wordcount article-meta-item">
-            <i class="fas fa-file-word"></i>&nbsp;<span>339 Words</span>
-        </span>
-    
-    
-        <span class="article-min2read article-meta-item">
-            <i class="fas fa-clock"></i>&nbsp;<span>1 Mins</span>
-        </span>
-    
-    
-</div>
-
-                    </div>
-                </div>
-            </div>
-        
-
-        <div class="article-content markdown-body">
-            <h2 id="三次握手四次挥手，为什么是三次握手而不是二次握手？"><a href="#三次握手四次挥手，为什么是三次握手而不是二次握手？" class="headerlink" title="三次握手四次挥手，为什么是三次握手而不是二次握手？"></a>三次握手四次挥手，为什么是三次握手而不是二次握手？</h2><p>客户端与服务端之间通过三次握手建立连接，四次挥手释放连接<br>所谓的三次握手是指建立一个TCP连接时，需要客户端和服务器总共发送三个包</p>
-<h3 id="三次握手"><a href="#三次握手" class="headerlink" title="三次握手"></a>三次握手</h3><p>原理：<br>(1)发送端首先发送一个带有SYN(synchronize)标志的数据包给接收方<br>(2)接收方接收后，回传一个SYN/ACK标志的数据包给发送方传递信息，表示已接收<br>(3)发送端收到接收方回传的数据包，会再次发送一个带有ACK标志的包进行确认，表示’握手’接收<br>三次握手的目的是连接服务器指定端口，建立TCP连接并同步连接双方的序列号和确认号并交换TCP窗口大小信息</p>
-<p>之所以是三次握手，是因为如果只有二次握手，在服务端收到SYN后，便向客户端返回一个ACK确认就进行establish状态，万一这个请求中间出现了网络问题没有发送给客户端，客户端一直处于等待状态，导致后面的信息无法正常接收。</p>
-<h3 id="四次挥手"><a href="#四次挥手" class="headerlink" title="四次挥手"></a>四次挥手</h3><p>原理：<br>改天再说，暂时不懂😄</p>
-<hr>
-<h2 id="HTTP的结构"><a href="#HTTP的结构" class="headerlink" title="HTTP的结构"></a>HTTP的结构</h2><h3 id=""><a href="#" class="headerlink" title=""></a></h3>
+        <div class="page-template-comments">
+            
         </div>
-
-        
-
-        
-            <div class="article-nav">
-                
-                    <div class="article-prev">
-                        <a class="prev"
-                           rel="prev"
-                           href="/2021/03/02/%E5%8E%9F%E5%9E%8B%E5%92%8C%E5%8E%9F%E5%9E%8B%E9%93%BE%E5%88%B0%E5%BA%95%E6%98%AF%E4%BB%80%E4%B9%88%E4%B8%9C%E8%A5%BF/"
-                        >
-                            <span class="left arrow-icon flex-center">
-                              <i class="fas fa-chevron-left"></i>
-                            </span>
-                            <span class="title flex-center">
-                                <span class="post-nav-title-item">原型和原型链到底是什么东西</span>
-                                <span class="post-nav-item">Prev posts</span>
-                            </span>
-                        </a>
-                    </div>
-                
-                
-                    <div class="article-next">
-                        <a class="next"
-                           rel="next"
-                           href="/2021/03/01/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"
-                        >
-                            <span class="title flex-center">
-                                <span class="post-nav-title-item">数据类型</span>
-                                <span class="post-nav-item">Next posts</span>
-                            </span>
-                            <span class="right arrow-icon flex-center">
-                              <i class="fas fa-chevron-right"></i>
-                            </span>
-                        </a>
-                    </div>
-                
-            </div>
-        
-
-        
     </div>
 </div>
 
@@ -268,23 +203,6 @@
         </div>
     </div>
 
-    
-        <div class="post-tools">
-            <div class="post-tools-container">
-    <ul class="tools-list">
-        <!-- TOC aside toggle -->
-        
-            <li class="tools-item page-aside-toggle">
-                <i class="fas fa-outdent"></i>
-            </li>
-        
-
-        <!-- go comment -->
-        
-    </ul>
-</div>
-
-        </div>
     
 
     <div class="right-bottom-side-tools">
@@ -330,14 +248,6 @@
 
     </div>
 
-    
-        <aside class="page-aside">
-            <div class="post-toc-wrap">
-    <div class="post-toc">
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B%EF%BC%8C%E4%B8%BA%E4%BB%80%E4%B9%88%E6%98%AF%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%E8%80%8C%E4%B8%8D%E6%98%AF%E4%BA%8C%E6%AC%A1%E6%8F%A1%E6%89%8B%EF%BC%9F"><span class="nav-number">1.</span> <span class="nav-text">三次握手四次挥手，为什么是三次握手而不是二次握手？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B"><span class="nav-number">1.1.</span> <span class="nav-text">三次握手</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B"><span class="nav-number">1.2.</span> <span class="nav-text">四次挥手</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HTTP%E7%9A%84%E7%BB%93%E6%9E%84"><span class="nav-number">2.</span> <span class="nav-text">HTTP的结构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">2.1.</span> <span class="nav-text"></span></a></li></ol></li></ol>
-    </div>
-</div>
-        </aside>
     
 
     <div class="image-viewer-container">
@@ -391,8 +301,6 @@
 
 
 <div class="post-scripts">
-    
-        <script src="/js/left-side-toggle.js"></script><script src="/js/libs/anime.min.js"></script><script src="/js/toc.js"></script>
     
 </div>
 
