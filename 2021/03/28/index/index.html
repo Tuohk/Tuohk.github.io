@@ -9,7 +9,7 @@
     
     <title>
         
-            Hello World |
+            图解HTTP——第四章  返回结果的HTTP状态码笔记 |
         
         Yogae Blog
     </title>
@@ -147,7 +147,7 @@
     <div class="article-content-container">
 
         <div class="article-title">
-            <span class="title-hover-animation">Hello World</span>
+            <span class="title-hover-animation">图解HTTP——第四章  返回结果的HTTP状态码笔记</span>
         </div>
 
         
@@ -165,7 +165,7 @@
                     <div class="meta-info">
                         <div class="article-meta-info">
     <span class="article-date article-meta-item">
-        <i class="fas fa-edit"></i>&nbsp;2021-02-21 15:29:58
+        <i class="fas fa-edit"></i>&nbsp;2021-03-28 11:20:12
     </span>
     
     
@@ -173,7 +173,7 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fas fa-file-word"></i>&nbsp;<span>75 Words</span>
+            <i class="fas fa-file-word"></i>&nbsp;<span>380 Words</span>
         </span>
     
     
@@ -190,20 +190,25 @@
         
 
         <div class="article-content markdown-body">
-            <p>Welcome to <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/" >Hexo<i class="fas fa-external-link-alt"></i></a>! This is your very first post. Check <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/" >documentation<i class="fas fa-external-link-alt"></i></a> for more info. If you get any problems when using Hexo, you can find the answer in <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html" >troubleshooting<i class="fas fa-external-link-alt"></i></a> or you can ask me on <a class="link"   target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues" >GitHub<i class="fas fa-external-link-alt"></i></a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre><code class="bash">$ hexo new &quot;My New Post&quot;
-</code></pre>
-<p>More info: <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html" >Writing<i class="fas fa-external-link-alt"></i></a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre><code class="bash">$ hexo server
-</code></pre>
-<p>More info: <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/server.html" >Server<i class="fas fa-external-link-alt"></i></a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre><code class="bash">$ hexo generate
-</code></pre>
-<p>More info: <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html" >Generating<i class="fas fa-external-link-alt"></i></a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre><code class="bash">$ hexo deploy
-</code></pre>
-<p>More info: <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html" >Deployment<i class="fas fa-external-link-alt"></i></a></p>
-
+            <h3 id="3-6-内容协商返回最合适的内容"><a href="#3-6-内容协商返回最合适的内容" class="headerlink" title="3.6 内容协商返回最合适的内容"></a>3.6 内容协商返回最合适的内容</h3><p>内容协商机制是指客户端和服务器端就响应的资源进行协商，提供给客户端最适合的资源</p>
+<p>以响应资源的语音，字符集，编码方式作为判断的基准</p>
+<p>内容协商有三种技术：</p>
+<p>1.服务器驱动协商</p>
+<p>2.客户端驱动协商</p>
+<p>3.透明协商</p>
+<h3 id="4-1-状态码告知从服务器端返回的请求结果"><a href="#4-1-状态码告知从服务器端返回的请求结果" class="headerlink" title="4.1 状态码告知从服务器端返回的请求结果"></a>4.1 状态码告知从服务器端返回的请求结果</h3><p>1XX 信息性状态码 接受的请求正在处理</p>
+<p>2XX 成功状态码 请求正常处理完毕</p>
+<p>3XX 重定向状态码 需要附加操作以完成请求</p>
+<p>4XX 客户端错误状态码 服务器无法处理请求</p>
+<p>5XX 服务器错误状态码 服务器处理请求出错</p>
+<h3 id="4-2-2XX-成功"><a href="#4-2-2XX-成功" class="headerlink" title="4.2 2XX 成功"></a>4.2 2XX 成功</h3><p>2XX 的响应结果表明请求被正常处理</p>
+<h4 id="4-2-1-200-OK"><a href="#4-2-1-200-OK" class="headerlink" title="4.2.1 200 OK"></a>4.2.1 200 OK</h4><p>表示客户端发来的请求被服务器端正常处理</p>
+<h4 id="4-2-2-204-No-Content"><a href="#4-2-2-204-No-Content" class="headerlink" title="4.2.2 204 No Content"></a>4.2.2 204 No Content</h4><p>表示客户端发来的请求被服务器正常处理，但是请求无资源返回</p>
+<h4 id="4-2-3-206-Partial-Content"><a href="#4-2-3-206-Partial-Content" class="headerlink" title="4.2.3 206 Partial Content"></a>4.2.3 206 Partial Content</h4><p>表示客户端进行了范围请求，服务器端正常处理了这部分的 GET 请求</p>
+<h4 id="4-3-3XX-重定向"><a href="#4-3-3XX-重定向" class="headerlink" title="4.3 3XX 重定向"></a>4.3 3XX 重定向</h4><p>3XX 的响应结果表明浏览器需要执行某些特殊的处理来正确处理请求</p>
+<h4 id="4-3-1-301-Move-Permanently"><a href="#4-3-1-301-Move-Permanently" class="headerlink" title="4.3.1 301 Move Permanently"></a>4.3.1 301 Move Permanently</h4><p>永久性重定向</p>
+<h4 id="4-3-2-302"><a href="#4-3-2-302" class="headerlink" title="4.3.2 302"></a>4.3.2 302</h4><p>临时重定向</p>
+<h4 id="4-3-3-303-See-other"><a href="#4-3-3-303-See-other" class="headerlink" title="4.3.3 303 See other"></a>4.3.3 303 See other</h4>
         </div>
 
         
@@ -211,21 +216,21 @@
         
             <div class="article-nav">
                 
-                    <div class="article-prev">
-                        <a class="prev"
-                           rel="prev"
-                           href="/2021/03/01/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/2021/03/02/HTML%E5%85%A5%E9%97%A8/"
                         >
-                            <span class="left arrow-icon flex-center">
-                              <i class="fas fa-chevron-left"></i>
-                            </span>
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">数据类型</span>
-                                <span class="post-nav-item">Prev posts</span>
+                                <span class="post-nav-title-item">HTML入门笔记</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
                             </span>
                         </a>
                     </div>
-                
                 
             </div>
         
@@ -327,7 +332,7 @@
         <aside class="page-aside">
             <div class="post-toc-wrap">
     <div class="post-toc">
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-6-%E5%86%85%E5%AE%B9%E5%8D%8F%E5%95%86%E8%BF%94%E5%9B%9E%E6%9C%80%E5%90%88%E9%80%82%E7%9A%84%E5%86%85%E5%AE%B9"><span class="nav-number">1.</span> <span class="nav-text">3.6 内容协商返回最合适的内容</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-%E7%8A%B6%E6%80%81%E7%A0%81%E5%91%8A%E7%9F%A5%E4%BB%8E%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AB%AF%E8%BF%94%E5%9B%9E%E7%9A%84%E8%AF%B7%E6%B1%82%E7%BB%93%E6%9E%9C"><span class="nav-number">2.</span> <span class="nav-text">4.1 状态码告知从服务器端返回的请求结果</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-2XX-%E6%88%90%E5%8A%9F"><span class="nav-number">3.</span> <span class="nav-text">4.2 2XX 成功</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#4-2-1-200-OK"><span class="nav-number">3.1.</span> <span class="nav-text">4.2.1 200 OK</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-2-2-204-No-Content"><span class="nav-number">3.2.</span> <span class="nav-text">4.2.2 204 No Content</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-2-3-206-Partial-Content"><span class="nav-number">3.3.</span> <span class="nav-text">4.2.3 206 Partial Content</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-3-3XX-%E9%87%8D%E5%AE%9A%E5%90%91"><span class="nav-number">3.4.</span> <span class="nav-text">4.3 3XX 重定向</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-3-1-301-Move-Permanently"><span class="nav-number">3.5.</span> <span class="nav-text">4.3.1 301 Move Permanently</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-3-2-302"><span class="nav-number">3.6.</span> <span class="nav-text">4.3.2 302</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-3-3-303-See-other"><span class="nav-number">3.7.</span> <span class="nav-text">4.3.3 303 See other</span></a></li></ol></li></ol>
     </div>
 </div>
         </aside>
