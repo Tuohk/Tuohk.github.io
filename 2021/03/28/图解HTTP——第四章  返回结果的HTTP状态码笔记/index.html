@@ -9,7 +9,7 @@
     
     <title>
         
-            HTML入门笔记 |
+            图解HTTP——第四章  返回结果的HTTP状态码笔记 |
         
         Yogae Blog
     </title>
@@ -147,7 +147,7 @@
     <div class="article-content-container">
 
         <div class="article-title">
-            <span class="title-hover-animation">HTML入门笔记</span>
+            <span class="title-hover-animation">图解HTTP——第四章  返回结果的HTTP状态码笔记</span>
         </div>
 
         
@@ -165,7 +165,7 @@
                     <div class="meta-info">
                         <div class="article-meta-info">
     <span class="article-date article-meta-item">
-        <i class="fas fa-edit"></i>&nbsp;2021-03-02 00:10:28
+        <i class="fas fa-edit"></i>&nbsp;2021-03-28 11:20:12
     </span>
     
     
@@ -173,7 +173,7 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fas fa-file-word"></i>&nbsp;<span>90 Words</span>
+            <i class="fas fa-file-word"></i>&nbsp;<span>380 Words</span>
         </span>
     
     
@@ -190,36 +190,25 @@
         
 
         <div class="article-content markdown-body">
-            <p>HTML是李爵士发明的</p>
-<p>HTML起手应该写标签</p>
-<h3 id="HTML的章节标签"><a href="#HTML的章节标签" class="headerlink" title="HTML的章节标签"></a>HTML的章节标签</h3><h4 id="表示文章-书签"><a href="#表示文章-书签" class="headerlink" title="表示文章/书签"></a>表示文章/书签</h4><p>标题h1~h6                            </p>
-<p>章节section</p>
-<p>文章article</p>
-<p>段落p</p>
-<p>头部header</p>
-<p>脚部footer</p>
-<p>主要内容main</p>
-<p>旁支内容aside</p>
-<p>划分div</p>
-<h4 id="全局属性"><a href="#全局属性" class="headerlink" title="全局属性"></a>全局属性</h4><p>class</p>
-<p>contenteditable</p>
-<p>hidden</p>
-<p>id</p>
-<p>style</p>
-<p>tabindex</p>
-<p>title</p>
-<h4 id="内容标签"><a href="#内容标签" class="headerlink" title="内容标签"></a>内容标签</h4><p>ol+li</p>
-<p>ul+li</p>
-<p>dl+dt+dd</p>
-<p>pre</p>
-<p>hr</p>
-<p>a</p>
-<p>em</p>
-<p>strong</p>
-<p>code</p>
-<p>quote</p>
-<p>blockquote</p>
-
+            <h3 id="3-6-内容协商返回最合适的内容"><a href="#3-6-内容协商返回最合适的内容" class="headerlink" title="3.6 内容协商返回最合适的内容"></a>3.6 内容协商返回最合适的内容</h3><p>内容协商机制是指客户端和服务器端就响应的资源进行协商，提供给客户端最适合的资源</p>
+<p>以响应资源的语音，字符集，编码方式作为判断的基准</p>
+<p>内容协商有三种技术：</p>
+<p>1.服务器驱动协商</p>
+<p>2.客户端驱动协商</p>
+<p>3.透明协商</p>
+<h3 id="4-1-状态码告知从服务器端返回的请求结果"><a href="#4-1-状态码告知从服务器端返回的请求结果" class="headerlink" title="4.1 状态码告知从服务器端返回的请求结果"></a>4.1 状态码告知从服务器端返回的请求结果</h3><p>1XX 信息性状态码 接受的请求正在处理</p>
+<p>2XX 成功状态码 请求正常处理完毕</p>
+<p>3XX 重定向状态码 需要附加操作以完成请求</p>
+<p>4XX 客户端错误状态码 服务器无法处理请求</p>
+<p>5XX 服务器错误状态码 服务器处理请求出错</p>
+<h3 id="4-2-2XX-成功"><a href="#4-2-2XX-成功" class="headerlink" title="4.2 2XX 成功"></a>4.2 2XX 成功</h3><p>2XX 的响应结果表明请求被正常处理</p>
+<h4 id="4-2-1-200-OK"><a href="#4-2-1-200-OK" class="headerlink" title="4.2.1 200 OK"></a>4.2.1 200 OK</h4><p>表示客户端发来的请求被服务器端正常处理</p>
+<h4 id="4-2-2-204-No-Content"><a href="#4-2-2-204-No-Content" class="headerlink" title="4.2.2 204 No Content"></a>4.2.2 204 No Content</h4><p>表示客户端发来的请求被服务器正常处理，但是请求无资源返回</p>
+<h4 id="4-2-3-206-Partial-Content"><a href="#4-2-3-206-Partial-Content" class="headerlink" title="4.2.3 206 Partial Content"></a>4.2.3 206 Partial Content</h4><p>表示客户端进行了范围请求，服务器端正常处理了这部分的 GET 请求</p>
+<h4 id="4-3-3XX-重定向"><a href="#4-3-3XX-重定向" class="headerlink" title="4.3 3XX 重定向"></a>4.3 3XX 重定向</h4><p>3XX 的响应结果表明浏览器需要执行某些特殊的处理来正确处理请求</p>
+<h4 id="4-3-1-301-Move-Permanently"><a href="#4-3-1-301-Move-Permanently" class="headerlink" title="4.3.1 301 Move Permanently"></a>4.3.1 301 Move Permanently</h4><p>永久性重定向</p>
+<h4 id="4-3-2-302"><a href="#4-3-2-302" class="headerlink" title="4.3.2 302"></a>4.3.2 302</h4><p>临时重定向</p>
+<h4 id="4-3-3-303-See-other"><a href="#4-3-3-303-See-other" class="headerlink" title="4.3.3 303 See other"></a>4.3.3 303 See other</h4>
         </div>
 
         
@@ -230,13 +219,13 @@
                     <div class="article-prev">
                         <a class="prev"
                            rel="prev"
-                           href="/2021/03/28/%E5%9B%BE%E8%A7%A3HTTP%E2%80%94%E2%80%94%E7%AC%AC%E5%9B%9B%E7%AB%A0%20%20%E8%BF%94%E5%9B%9E%E7%BB%93%E6%9E%9C%E7%9A%84HTTP%E7%8A%B6%E6%80%81%E7%A0%81%E7%AC%94%E8%AE%B0/"
+                           href="/2021/04/06/JavaScript%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/"
                         >
                             <span class="left arrow-icon flex-center">
                               <i class="fas fa-chevron-left"></i>
                             </span>
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">图解HTTP——第四章  返回结果的HTTP状态码笔记</span>
+                                <span class="post-nav-title-item">JavaScript基本语法</span>
                                 <span class="post-nav-item">Prev posts</span>
                             </span>
                         </a>
@@ -246,10 +235,10 @@
                     <div class="article-next">
                         <a class="next"
                            rel="next"
-                           href="/2021/03/02/%E5%8E%9F%E5%9E%8B%E5%92%8C%E5%8E%9F%E5%9E%8B%E9%93%BE%E5%88%B0%E5%BA%95%E6%98%AF%E4%BB%80%E4%B9%88%E4%B8%9C%E8%A5%BF/"
+                           href="/2021/03/02/HTML%E5%85%A5%E9%97%A8/"
                         >
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">原型和原型链到底是什么东西</span>
+                                <span class="post-nav-title-item">HTML入门笔记</span>
                                 <span class="post-nav-item">Next posts</span>
                             </span>
                             <span class="right arrow-icon flex-center">
@@ -358,7 +347,7 @@
         <aside class="page-aside">
             <div class="post-toc-wrap">
     <div class="post-toc">
-        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#HTML%E7%9A%84%E7%AB%A0%E8%8A%82%E6%A0%87%E7%AD%BE"><span class="nav-number">1.</span> <span class="nav-text">HTML的章节标签</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%A1%A8%E7%A4%BA%E6%96%87%E7%AB%A0-%E4%B9%A6%E7%AD%BE"><span class="nav-number">1.1.</span> <span class="nav-text">表示文章&#x2F;书签</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%A8%E5%B1%80%E5%B1%9E%E6%80%A7"><span class="nav-number">1.2.</span> <span class="nav-text">全局属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%86%85%E5%AE%B9%E6%A0%87%E7%AD%BE"><span class="nav-number">1.3.</span> <span class="nav-text">内容标签</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-6-%E5%86%85%E5%AE%B9%E5%8D%8F%E5%95%86%E8%BF%94%E5%9B%9E%E6%9C%80%E5%90%88%E9%80%82%E7%9A%84%E5%86%85%E5%AE%B9"><span class="nav-number">1.</span> <span class="nav-text">3.6 内容协商返回最合适的内容</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-%E7%8A%B6%E6%80%81%E7%A0%81%E5%91%8A%E7%9F%A5%E4%BB%8E%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AB%AF%E8%BF%94%E5%9B%9E%E7%9A%84%E8%AF%B7%E6%B1%82%E7%BB%93%E6%9E%9C"><span class="nav-number">2.</span> <span class="nav-text">4.1 状态码告知从服务器端返回的请求结果</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-2XX-%E6%88%90%E5%8A%9F"><span class="nav-number">3.</span> <span class="nav-text">4.2 2XX 成功</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#4-2-1-200-OK"><span class="nav-number">3.1.</span> <span class="nav-text">4.2.1 200 OK</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-2-2-204-No-Content"><span class="nav-number">3.2.</span> <span class="nav-text">4.2.2 204 No Content</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-2-3-206-Partial-Content"><span class="nav-number">3.3.</span> <span class="nav-text">4.2.3 206 Partial Content</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-3-3XX-%E9%87%8D%E5%AE%9A%E5%90%91"><span class="nav-number">3.4.</span> <span class="nav-text">4.3 3XX 重定向</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-3-1-301-Move-Permanently"><span class="nav-number">3.5.</span> <span class="nav-text">4.3.1 301 Move Permanently</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-3-2-302"><span class="nav-number">3.6.</span> <span class="nav-text">4.3.2 302</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-3-3-303-See-other"><span class="nav-number">3.7.</span> <span class="nav-text">4.3.3 303 See other</span></a></li></ol></li></ol>
     </div>
 </div>
         </aside>
