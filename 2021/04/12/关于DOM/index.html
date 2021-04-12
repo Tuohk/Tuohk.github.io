@@ -9,7 +9,7 @@
     
     <title>
         
-            原型和原型链到底是什么东西 |
+            关于DOM🥱 |
         
         Yogae Blog
     </title>
@@ -147,7 +147,7 @@
     <div class="article-content-container">
 
         <div class="article-title">
-            <span class="title-hover-animation">原型和原型链到底是什么东西</span>
+            <span class="title-hover-animation">关于DOM🥱</span>
         </div>
 
         
@@ -165,12 +165,16 @@
                     <div class="meta-info">
                         <div class="article-meta-info">
     <span class="article-date article-meta-item">
-        <i class="fas fa-edit"></i>&nbsp;2021-03-02 00:10:28
+        <i class="fas fa-edit"></i>&nbsp;2021-04-12 23:25:54
     </span>
     
     
 
     
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fas fa-file-word"></i>&nbsp;<span>198 Words</span>
+        </span>
     
     
         <span class="article-min2read article-meta-item">
@@ -186,7 +190,31 @@
         
 
         <div class="article-content markdown-body">
-            
+            <h2 id="获取特定元素"><a href="#获取特定元素" class="headerlink" title="获取特定元素"></a>获取特定元素</h2><pre><code>document.documentElement
+</code></pre>
+<h3 id="获取head元素"><a href="#获取head元素" class="headerlink" title="获取head元素"></a>获取head元素</h3><pre><code>document.head
+</code></pre>
+<h3 id="获取body元素"><a href="#获取body元素" class="headerlink" title="获取body元素"></a>获取body元素</h3><pre><code>document.body
+</code></pre>
+<h3 id="获取窗口（窗口不是元素）"><a href="#获取窗口（窗口不是元素）" class="headerlink" title="获取窗口（窗口不是元素）"></a>获取窗口（窗口不是元素）</h3><pre><code>window
+</code></pre>
+<h3 id="获取所有元素"><a href="#获取所有元素" class="headerlink" title="获取所有元素"></a>获取所有元素</h3><pre><code>document.all
+</code></pre>
+<h3 id="Property-vs-Atteibute"><a href="#Property-vs-Atteibute" class="headerlink" title="Property vs Atteibute"></a>Property vs Atteibute</h3><h4 id="property属性"><a href="#property属性" class="headerlink" title="property属性"></a>property属性</h4><p>JS线程中div1的所有属性，叫做div1的property</p>
+<h4 id="attribute也是属性"><a href="#attribute也是属性" class="headerlink" title="attribute也是属性"></a>attribute也是属性</h4><p>渲染引擎中div1对应标签的属性，叫做attribute</p>
+<h4 id="区别："><a href="#区别：" class="headerlink" title="区别："></a>区别：</h4><p>大部分时候，同名的property和attribute值相等</p>
+<p>但如果不是标准属性，那么它两只会在一开始时相等</p>
+<p>但注意attribute只支持字符串</p>
+<p>而property支持字符串，布尔等类型</p>
+<h2 id="DOM的增删改查"><a href="#DOM的增删改查" class="headerlink" title="DOM的增删改查"></a>DOM的增删改查</h2><h4 id="删"><a href="#删" class="headerlink" title="删"></a>删</h4><p>旧：parentNode.childChile(chileNode)</p>
+<p>新：chileNode.remove()</p>
+<h4 id="改"><a href="#改" class="headerlink" title="改"></a>改</h4><p>改class: div.className = ‘red blue’(全覆盖)</p>
+<p>改class: div.classList.add(‘red’)</p>
+<p>改style: div.style = ‘width: 100px; color:blue;’</p>
+<p>改style的一部分: div.style.width = ‘200px’</p>
+<p>​            大小写：div.style.backgroundColor=’white’</p>
+<p>改data-*属性：div.dataset.x = ‘frank’</p>
+
         </div>
 
         
@@ -194,29 +222,14 @@
         
             <div class="article-nav">
                 
-                    <div class="article-prev">
-                        <a class="prev"
-                           rel="prev"
-                           href="/2021/03/28/%E5%9B%BE%E8%A7%A3HTTP%E2%80%94%E2%80%94%E7%AC%AC%E5%9B%9B%E7%AB%A0%20%20%E8%BF%94%E5%9B%9E%E7%BB%93%E6%9E%9C%E7%9A%84HTTP%E7%8A%B6%E6%80%81%E7%A0%81%E7%AC%94%E8%AE%B0/"
-                        >
-                            <span class="left arrow-icon flex-center">
-                              <i class="fas fa-chevron-left"></i>
-                            </span>
-                            <span class="title flex-center">
-                                <span class="post-nav-title-item">图解HTTP——第四章  返回结果的HTTP状态码笔记</span>
-                                <span class="post-nav-item">Prev posts</span>
-                            </span>
-                        </a>
-                    </div>
-                
                 
                     <div class="article-next">
                         <a class="next"
                            rel="next"
-                           href="/2021/03/02/HTML%E5%85%A5%E9%97%A8/"
+                           href="/2021/04/11/JavaScript%E6%89%A7%E8%A1%8C%E6%97%B6%E6%9C%BA/"
                         >
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">HTML入门笔记</span>
+                                <span class="post-nav-title-item">JavaScript执行时机😁</span>
                                 <span class="post-nav-item">Next posts</span>
                             </span>
                             <span class="right arrow-icon flex-center">
@@ -325,7 +338,7 @@
         <aside class="page-aside">
             <div class="post-toc-wrap">
     <div class="post-toc">
-        
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%8E%B7%E5%8F%96%E7%89%B9%E5%AE%9A%E5%85%83%E7%B4%A0"><span class="nav-number">1.</span> <span class="nav-text">获取特定元素</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%8E%B7%E5%8F%96head%E5%85%83%E7%B4%A0"><span class="nav-number">1.1.</span> <span class="nav-text">获取head元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%8E%B7%E5%8F%96body%E5%85%83%E7%B4%A0"><span class="nav-number">1.2.</span> <span class="nav-text">获取body元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%8E%B7%E5%8F%96%E7%AA%97%E5%8F%A3%EF%BC%88%E7%AA%97%E5%8F%A3%E4%B8%8D%E6%98%AF%E5%85%83%E7%B4%A0%EF%BC%89"><span class="nav-number">1.3.</span> <span class="nav-text">获取窗口（窗口不是元素）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%8E%B7%E5%8F%96%E6%89%80%E6%9C%89%E5%85%83%E7%B4%A0"><span class="nav-number">1.4.</span> <span class="nav-text">获取所有元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Property-vs-Atteibute"><span class="nav-number">1.5.</span> <span class="nav-text">Property vs Atteibute</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#property%E5%B1%9E%E6%80%A7"><span class="nav-number">1.5.1.</span> <span class="nav-text">property属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#attribute%E4%B9%9F%E6%98%AF%E5%B1%9E%E6%80%A7"><span class="nav-number">1.5.2.</span> <span class="nav-text">attribute也是属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8C%BA%E5%88%AB%EF%BC%9A"><span class="nav-number">1.5.3.</span> <span class="nav-text">区别：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DOM%E7%9A%84%E5%A2%9E%E5%88%A0%E6%94%B9%E6%9F%A5"><span class="nav-number">2.</span> <span class="nav-text">DOM的增删改查</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%A0"><span class="nav-number">2.0.1.</span> <span class="nav-text">删</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%94%B9"><span class="nav-number">2.0.2.</span> <span class="nav-text">改</span></a></li></ol></li></ol></li></ol>
     </div>
 </div>
         </aside>

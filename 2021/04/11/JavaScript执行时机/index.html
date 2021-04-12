@@ -9,7 +9,7 @@
     
     <title>
         
-            对象增删改查小记😋 |
+            JavaScript执行时机😁 |
         
         Yogae Blog
     </title>
@@ -147,7 +147,7 @@
     <div class="article-content-container">
 
         <div class="article-title">
-            <span class="title-hover-animation">对象增删改查小记😋</span>
+            <span class="title-hover-animation">JavaScript执行时机😁</span>
         </div>
 
         
@@ -165,16 +165,12 @@
                     <div class="meta-info">
                         <div class="article-meta-info">
     <span class="article-date article-meta-item">
-        <i class="fas fa-edit"></i>&nbsp;2021-03-01 23:55:54
+        <i class="fas fa-edit"></i>&nbsp;2021-04-11 11:46:54
     </span>
     
     
 
     
-    
-        <span class="article-wordcount article-meta-item">
-            <i class="fas fa-file-word"></i>&nbsp;<span>249 Words</span>
-        </span>
     
     
         <span class="article-min2read article-meta-item">
@@ -190,37 +186,7 @@
         
 
         <div class="article-content markdown-body">
-            <h2 id="JavaScript-对象基本用法"><a href="#JavaScript-对象基本用法" class="headerlink" title="JavaScript 对象基本用法"></a>JavaScript 对象基本用法</h2><h3 id="对象删除属性"><a href="#对象删除属性" class="headerlink" title="对象删除属性"></a>对象删除属性</h3><pre><code>delete obj.xxx 或 delete obj[&#39;xxx&#39;]
-
-//即可删除obj的xxx属性 请区分属性值为Undefined和不含属性名
-</code></pre>
-<pre><code>&#39;xxx&#39; in obj === false
-//不含属性名
-</code></pre>
-<pre><code>&#39;XXX&#39; in obj &amp;&amp; obj.XXX === undefined
-//含有属性名，但是值为undefined
-</code></pre>
-<pre><code>obj.xxx === undefined
-//不能断定&#39;xxx&#39; 是否为obj的属性
-</code></pre>
-<h3 id="查询"><a href="#查询" class="headerlink" title="查询"></a>查询</h3><pre><code>Object.keys(obj)
-console.dir(obj)
-obj[&#39;name&#39;]
-obj.name //记住这里的name是字符串
-obj[name] //记住这里的name是变量
-</code></pre>
-<h3 id="改"><a href="#改" class="headerlink" title="改"></a>改</h3><pre><code>obj[&#39;name&#39;] = &#39;jack&#39; //改自身
-Object.assign(obj,&#123;age:18,...&#125;) //批量改自身
-obj._proto_[&#39;toString&#39;] = &#39;xxx&#39; //改共有属性 不推荐
-Object.prototype[&#39;toString&#39;] = &#39;xxx&#39; //改共有属性
-obj._proto_ = common    //改原型 不推荐
-let obj = Object.create(common) //改原型
-ps:所有的__proto__代码都是强烈不推荐写的
-</code></pre>
-<h3 id="增"><a href="#增" class="headerlink" title="增"></a>增</h3><pre><code>var obj1 = Object.create(&#123;name : &#39;frank&#39;&#125;) //属性添加在新的原型上
-var obj2 = new Object(&#123;name : &#39;frank&#39;&#125;) //属性在自身上
-</code></pre>
-
+            
         </div>
 
         
@@ -231,13 +197,13 @@ var obj2 = new Object(&#123;name : &#39;frank&#39;&#125;) //属性在自身上
                     <div class="article-prev">
                         <a class="prev"
                            rel="prev"
-                           href="/2021/03/02/%E5%8E%9F%E5%9E%8B%E5%92%8C%E5%8E%9F%E5%9E%8B%E9%93%BE%E5%88%B0%E5%BA%95%E6%98%AF%E4%BB%80%E4%B9%88%E4%B8%9C%E8%A5%BF/"
+                           href="/2021/04/12/%E5%85%B3%E4%BA%8EDOM/"
                         >
                             <span class="left arrow-icon flex-center">
                               <i class="fas fa-chevron-left"></i>
                             </span>
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">原型和原型链到底是什么东西</span>
+                                <span class="post-nav-title-item">关于DOM🥱</span>
                                 <span class="post-nav-item">Prev posts</span>
                             </span>
                         </a>
@@ -247,10 +213,10 @@ var obj2 = new Object(&#123;name : &#39;frank&#39;&#125;) //属性在自身上
                     <div class="article-next">
                         <a class="next"
                            rel="next"
-                           href="/2021/03/01/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"
+                           href="/2021/04/07/%E5%AF%B9%E8%B1%A1%E5%A2%9E%E5%88%A0%E6%94%B9%E6%9F%A5%E5%B0%8F%E8%AE%B0/"
                         >
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">计算机网络</span>
+                                <span class="post-nav-title-item">对象增删改查小记😋</span>
                                 <span class="post-nav-item">Next posts</span>
                             </span>
                             <span class="right arrow-icon flex-center">
@@ -359,7 +325,7 @@ var obj2 = new Object(&#123;name : &#39;frank&#39;&#125;) //属性在自身上
         <aside class="page-aside">
             <div class="post-toc-wrap">
     <div class="post-toc">
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#JavaScript-%E5%AF%B9%E8%B1%A1%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95"><span class="nav-number">1.</span> <span class="nav-text">JavaScript 对象基本用法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%B9%E8%B1%A1%E5%88%A0%E9%99%A4%E5%B1%9E%E6%80%A7"><span class="nav-number">1.1.</span> <span class="nav-text">对象删除属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9F%A5%E8%AF%A2"><span class="nav-number">1.2.</span> <span class="nav-text">查询</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%94%B9"><span class="nav-number">1.3.</span> <span class="nav-text">改</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A2%9E"><span class="nav-number">1.4.</span> <span class="nav-text">增</span></a></li></ol></li></ol>
+        
     </div>
 </div>
         </aside>
