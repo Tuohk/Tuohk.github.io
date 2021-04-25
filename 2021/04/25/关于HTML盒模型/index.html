@@ -9,7 +9,7 @@
     
     <title>
         
-            数据类型小记😁 |
+            关于HTML盒模型 |
         
         Yogae Blog
     </title>
@@ -147,7 +147,7 @@
     <div class="article-content-container">
 
         <div class="article-title">
-            <span class="title-hover-animation">数据类型小记😁</span>
+            <span class="title-hover-animation">关于HTML盒模型</span>
         </div>
 
         
@@ -165,7 +165,7 @@
                     <div class="meta-info">
                         <div class="article-meta-info">
     <span class="article-date article-meta-item">
-        <i class="fas fa-edit"></i>&nbsp;2021-04-07 17:03:54
+        <i class="fas fa-edit"></i>&nbsp;2021-04-25 20:13:54
     </span>
     
     
@@ -173,7 +173,7 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fas fa-file-word"></i>&nbsp;<span>117 Words</span>
+            <i class="fas fa-file-word"></i>&nbsp;<span>58 Words</span>
         </span>
     
     
@@ -190,34 +190,10 @@
         
 
         <div class="article-content markdown-body">
-            <h4 id="变量声明"><a href="#变量声明" class="headerlink" title="变量声明"></a>变量声明</h4><p>三种声明方式</p>
-<pre><code class="javascript">var a = 1;
-let a = 1;
-const a = 1;
-a = 1; //错误形式
-</code></pre>
-<p>区别 var 过时 const 声明后必须赋值,且不能修改, 最后声明方式为错误形式</p>
-<p>var 有变量提升</p>
-<h4 id="name-和-‘name’的区别"><a href="#name-和-‘name’的区别" class="headerlink" title="name 和 ‘name’的区别"></a>name 和 ‘name’的区别</h4><p>一个是变量 一个是字符串</p>
-<h4 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h4><pre><code>number =&gt; string
-String(n)
-n + &#39;&#39;
-&#39;&#39; + n
-
-string =&gt; number
-Numbers(s)
-parseInt(s) / parseFloat(s)
-s - 0
-
-X =&gt; bool
-Boolean(x)
-!!X
-
-X =&gt; string
-String(x)
-x.toString(x)
-
-</code></pre>
+            <p>CSS的盒模型分两种，一种content盒模型   一种是border盒模型</p>
+<p>content 的宽度只包含content内容</p>
+<p>border的宽度包含border padding content</p>
+<p>CSS调试时可使用border 也可使用outline outline不计边框元素</p>
 
         </div>
 
@@ -229,13 +205,13 @@ x.toString(x)
                     <div class="article-prev">
                         <a class="prev"
                            rel="prev"
-                           href="/2021/04/07/%E5%AF%B9%E8%B1%A1%E5%A2%9E%E5%88%A0%E6%94%B9%E6%9F%A5%E5%B0%8F%E8%AE%B0/"
+                           href="/2021/04/25/webpack%E4%B8%AD%20loader%E5%92%8Cplugin%E7%9A%84%E5%8C%BA%E5%88%AB/"
                         >
                             <span class="left arrow-icon flex-center">
                               <i class="fas fa-chevron-left"></i>
                             </span>
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">对象增删改查小记😋</span>
+                                <span class="post-nav-title-item">webpack中 loader和plugin的区别</span>
                                 <span class="post-nav-item">Prev posts</span>
                             </span>
                         </a>
@@ -245,10 +221,10 @@ x.toString(x)
                     <div class="article-next">
                         <a class="next"
                            rel="next"
-                           href="/2021/04/06/JavaScript%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/"
+                           href="/2021/04/12/%E5%85%B3%E4%BA%8EDOM/"
                         >
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">JavaScript基本语法</span>
+                                <span class="post-nav-title-item">关于DOM🥱</span>
                                 <span class="post-nav-item">Next posts</span>
                             </span>
                             <span class="right arrow-icon flex-center">
@@ -370,7 +346,7 @@ x.toString(x)
         <aside class="page-aside">
             <div class="post-toc-wrap">
     <div class="post-toc">
-        <ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E"><span class="nav-number">1.</span> <span class="nav-text">变量声明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#name-%E5%92%8C-%E2%80%98name%E2%80%99%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">2.</span> <span class="nav-text">name 和 ‘name’的区别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2"><span class="nav-number">3.</span> <span class="nav-text">类型转换</span></a></li></ol>
+        
     </div>
 </div>
         </aside>
