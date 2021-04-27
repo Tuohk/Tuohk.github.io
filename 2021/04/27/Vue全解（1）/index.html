@@ -9,7 +9,7 @@
     
     <title>
         
-            今天看完图解HTTP |
+            Vue全解（1） |
         
         Yogae Blog
     </title>
@@ -72,7 +72,7 @@
                         </li>
                     
                         <li class="menu-item">
-                            <a class="active"
+                            <a class=""
                                href="/life"
                             >
                                 生活
@@ -119,7 +119,7 @@
                 </li>
             
                 <li class="drawer-menu-item flex-center">
-                    <a class="active"
+                    <a class=""
                        href="/life">生活</a>
                 </li>
             
@@ -143,165 +143,104 @@
             <div class="main-content">
 
                 
-                    $friend-link-item-height = 82px;
-$friend-link-item-height-tablet = 68px;
-$friend-link-item-interval = 16px;
-$friend-link-item-border-radius = 6px;
+                    <div class="fade-in-down-animation">
+    <div class="article-content-container">
 
-.page-template-container {
+        <div class="article-title">
+            <span class="title-hover-animation">Vue全解（1）</span>
+        </div>
 
-  keep-container(false, 0, 0, 30px, 30px);
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="/images/logo.svg">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">Yogae</span>
+                        
+                            <span class="author-label">健身狂魔</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-edit"></i>&nbsp;2021-04-27 20:23:46
+    </span>
+    
+    
 
-  .page-template-content {
-    color: var(--default-text-color);
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fas fa-file-word"></i>&nbsp;<span>57 Words</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fas fa-clock"></i>&nbsp;<span>1 Mins</span>
+        </span>
+    
+    
+</div>
 
-    h1, h2, h3, h4, h5, h6 {
+                    </div>
+                </div>
+            </div>
+        
 
-      &:first-child {
-        margin-top: 0;
-      }
+        <div class="article-content markdown-body">
+            <h1 id="Vue全解（1）"><a href="#Vue全解（1）" class="headerlink" title="Vue全解（1）"></a>Vue全解（1）</h1><h4 id="options的五类属性"><a href="#options的五类属性" class="headerlink" title="options的五类属性"></a>options的五类属性</h4><p>数据：data, props, propsData, computed, methods, watch</p>
+<p>DOM: el, template, render, renderError</p>
+<p>生命周期钩子: beforeCreate, created, beforeMount, mounted, beforeUpdate, updated, activated, deactivated, beforeDestroy, destoryed, errorCaptured.</p>
+<p>资源: directives, filters, components</p>
+<p>组合: parent, mixins, extends, provide, inject</p>
+<p>其他: 先不看。</p>
 
-    }
-  }
+        </div>
 
+        
 
-  if (hexo-config('menu.Links')) {
-    .friends-link-container {
+        
+            <div class="article-nav">
+                
+                    <div class="article-prev">
+                        <a class="prev"
+                           rel="prev"
+                           href="/2021/04/27/%E4%BB%80%E4%B9%88%E6%98%AFVUE%E5%93%8D%E5%BA%94%E5%BC%8F%E5%8E%9F%E7%90%86%EF%BC%9F/"
+                        >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">什么是VUE响应式原理？</span>
+                                <span class="post-nav-item">Prev posts</span>
+                            </span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/2021/04/27/Vue%E6%96%87%E6%A1%A3%E5%B0%8F%E8%AE%B0%E4%B9%8B%E5%AE%9E%E4%BE%8B/"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">Vue文档小记之实例</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
 
-      .friends-link-list {
-        position: relative;
-
-        .friends-link-item {
-          box-sizing: border-box;
-          position: relative;
-          float: left;
-          width: 50%;
-          cursor: pointer;
-          height: $friend-link-item-height;
-          padding-bottom: $friend-link-item-interval;
-
-          +keep-tablet() {
-            height: $friend-link-item-height-tablet;
-          }
-
-          &:nth-child(odd) {
-            padding-right: $friend-link-item-interval * 0.5;
-          }
-
-          &:nth-child(even) {
-            padding-left: $friend-link-item-interval * 0.5;
-          }
-
-          .content {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            box-shadow: 1px 1px 2px var(--shadow-color);
-            border-radius: $friend-link-item-border-radius;
-            padding-left: $friend-link-item-height - $friend-link-item-interval;
-            box-sizing: border-box;
-
-
-            +keep-tablet() {
-              padding-left: $friend-link-item-height-tablet - $friend-link-item-interval;
-            }
-
-            &:hover {
-              box-shadow: 1px 1px 6px var(--shadow-color);
-
-              .info .name {
-                color: var(--primary-color);
-              }
-            }
-
-            .radius {
-              border-top-left-radius: $friend-link-item-border-radius;
-              border-bottom-left-radius: $friend-link-item-border-radius;
-            }
-
-            .avatar {
-              position: absolute;
-              top: 0;
-              left: 0;
-              width: $friend-link-item-height  - $friend-link-item-interval;
-              height: 100%;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              font-size: 2rem;
-              background: var(--second-background-color);
-              color: var(--second-text-color);
-
-
-              +keep-tablet() {
-                width: $friend-link-item-height-tablet  - $friend-link-item-interval;
-              }
-
-              img {
-                box-sizing: border-box;
-                position: relative;
-                width: 100%;
-                height: 100%;
-              }
-            }
-
-
-            .info {
-              position: relative;
-              width: 100%;
-              height: 100%;
-              box-sizing: border-box;
-              padding: 10px;
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-              justify-items: flex-start;
-
-              +keep-tablet() {
-                padding: 6px;
-              }
-
-              .name {
-                width: 100%;
-                height: 60%;
-                font-size: 1.28rem;
-                color: var(--second-text-color);
-
-                +keep-tablet() {
-                  font-size: 1.08rem;
-                }
-              }
-
-              .description {
-                width: 100%;
-                height: 40%;
-                font-size: 1rem;
-                color: var(--third-text-color);
-
-
-                +keep-tablet() {
-                  font-size: 0.98rem;
-                }
-              }
-
-              .ellipsis {
-                overflow: hidden;
-                text-overflow: ellipsis;
-                white-space: nowrap;
-              }
-
-            }
-          }
-
-        }
-
-      }
-
-    }
-
-  }
-
-}
+        
+    </div>
+</div>
 
 
                 
@@ -330,6 +269,23 @@ $friend-link-item-border-radius = 6px;
         </div>
     </div>
 
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item page-aside-toggle">
+                <i class="fas fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
     
 
     <div class="right-bottom-side-tools">
@@ -375,6 +331,14 @@ $friend-link-item-border-radius = 6px;
 
     </div>
 
+    
+        <aside class="page-aside">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Vue%E5%85%A8%E8%A7%A3%EF%BC%881%EF%BC%89"><span class="nav-number">1.</span> <span class="nav-text">Vue全解（1）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#options%E7%9A%84%E4%BA%94%E7%B1%BB%E5%B1%9E%E6%80%A7"><span class="nav-number">1.0.0.1.</span> <span class="nav-text">options的五类属性</span></a></li></ol></li></ol></li></ol></li></ol>
+    </div>
+</div>
+        </aside>
     
 
     <div class="image-viewer-container">
@@ -428,6 +392,8 @@ $friend-link-item-border-radius = 6px;
 
 
 <div class="post-scripts">
+    
+        <script src="/js/left-side-toggle.js"></script><script src="/js/libs/anime.min.js"></script><script src="/js/toc.js"></script>
     
 </div>
 

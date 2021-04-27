@@ -9,8 +9,6 @@
     
     <title>
         
-            今天看完图解HTTP |
-        
         Yogae Blog
     </title>
     <link rel="stylesheet" href="/css/style.css">
@@ -56,7 +54,7 @@
                 <ul class="menu-list">
                     
                         <li class="menu-item">
-                            <a class=""
+                            <a class="active"
                                href="/"
                             >
                                 首页
@@ -72,7 +70,7 @@
                         </li>
                     
                         <li class="menu-item">
-                            <a class="active"
+                            <a class=""
                                href="/life"
                             >
                                 生活
@@ -109,7 +107,7 @@
         <ul class="drawer-menu-list">
             
                 <li class="drawer-menu-item flex-center">
-                    <a class=""
+                    <a class="active"
                        href="/">首页</a>
                 </li>
             
@@ -119,7 +117,7 @@
                 </li>
             
                 <li class="drawer-menu-item flex-center">
-                    <a class="active"
+                    <a class=""
                        href="/life">生活</a>
                 </li>
             
@@ -143,165 +141,64 @@
             <div class="main-content">
 
                 
-                    $friend-link-item-height = 82px;
-$friend-link-item-height-tablet = 68px;
-$friend-link-item-interval = 16px;
-$friend-link-item-border-radius = 6px;
+                    <div class="home-content-container fade-in-down-animation">
+    <ul class="home-article-list">
+        
+            <li class="home-article-item">
 
-.page-template-container {
+                
 
-  keep-container(false, 0, 0, 30px, 30px);
+                <h3 class="home-article-title">
+                    <a href="/2021/03/01/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">
+                        数据类型
+                    </a>
+                </h3>
 
-  .page-template-content {
-    color: var(--default-text-color);
+                <div class="home-article-content markdown-body">
+                    
+                        JavaScript中什么是基本数据类型什么是引用类型？以及各个数据类型是如何存储的？基本数据类型有：U ARE SO NBU(undefined) S(string symbol) N(null number) B(boolean BigInt)引...
+                    
+                </div>
 
-    h1, h2, h3, h4, h5, h6 {
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Mon Mar 01 2021 20:59:07 GMT+0800">2021-03-01</span></span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/JavaScript/">JavaScript</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
 
-      &:first-child {
-        margin-top: 0;
-      }
+    <a href="/2021/03/01/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
 
-    }
-  }
+            </li>
+        
+    </ul>
 
+    <div class="home-paginator">
+        <div class="paginator">
+    
+        <a class="prev btn"
+           href="/page/2/"
+        >Prev</a>
+    
 
-  if (hexo-config('menu.Links')) {
-    .friends-link-container {
+    
+</div>
 
-      .friends-link-list {
-        position: relative;
-
-        .friends-link-item {
-          box-sizing: border-box;
-          position: relative;
-          float: left;
-          width: 50%;
-          cursor: pointer;
-          height: $friend-link-item-height;
-          padding-bottom: $friend-link-item-interval;
-
-          +keep-tablet() {
-            height: $friend-link-item-height-tablet;
-          }
-
-          &:nth-child(odd) {
-            padding-right: $friend-link-item-interval * 0.5;
-          }
-
-          &:nth-child(even) {
-            padding-left: $friend-link-item-interval * 0.5;
-          }
-
-          .content {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            box-shadow: 1px 1px 2px var(--shadow-color);
-            border-radius: $friend-link-item-border-radius;
-            padding-left: $friend-link-item-height - $friend-link-item-interval;
-            box-sizing: border-box;
-
-
-            +keep-tablet() {
-              padding-left: $friend-link-item-height-tablet - $friend-link-item-interval;
-            }
-
-            &:hover {
-              box-shadow: 1px 1px 6px var(--shadow-color);
-
-              .info .name {
-                color: var(--primary-color);
-              }
-            }
-
-            .radius {
-              border-top-left-radius: $friend-link-item-border-radius;
-              border-bottom-left-radius: $friend-link-item-border-radius;
-            }
-
-            .avatar {
-              position: absolute;
-              top: 0;
-              left: 0;
-              width: $friend-link-item-height  - $friend-link-item-interval;
-              height: 100%;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              font-size: 2rem;
-              background: var(--second-background-color);
-              color: var(--second-text-color);
-
-
-              +keep-tablet() {
-                width: $friend-link-item-height-tablet  - $friend-link-item-interval;
-              }
-
-              img {
-                box-sizing: border-box;
-                position: relative;
-                width: 100%;
-                height: 100%;
-              }
-            }
-
-
-            .info {
-              position: relative;
-              width: 100%;
-              height: 100%;
-              box-sizing: border-box;
-              padding: 10px;
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-              justify-items: flex-start;
-
-              +keep-tablet() {
-                padding: 6px;
-              }
-
-              .name {
-                width: 100%;
-                height: 60%;
-                font-size: 1.28rem;
-                color: var(--second-text-color);
-
-                +keep-tablet() {
-                  font-size: 1.08rem;
-                }
-              }
-
-              .description {
-                width: 100%;
-                height: 40%;
-                font-size: 1rem;
-                color: var(--third-text-color);
-
-
-                +keep-tablet() {
-                  font-size: 0.98rem;
-                }
-              }
-
-              .ellipsis {
-                overflow: hidden;
-                text-overflow: ellipsis;
-                white-space: nowrap;
-              }
-
-            }
-          }
-
-        }
-
-      }
-
-    }
-
-  }
-
-}
+    </div>
+</div>
 
 
                 
@@ -414,6 +311,7 @@ $friend-link-item-border-radius = 6px;
     
 
 </main>
+
 
 
 
