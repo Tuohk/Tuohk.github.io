@@ -9,7 +9,7 @@
     
     <title>
         
-            javascript splice |
+            let和for代码块区别 |
         
         Yogae Blog
     </title>
@@ -147,7 +147,7 @@
     <div class="article-content-container">
 
         <div class="article-title">
-            <span class="title-hover-animation">javascript splice</span>
+            <span class="title-hover-animation">let和for代码块区别</span>
         </div>
 
         
@@ -165,7 +165,7 @@
                     <div class="meta-info">
                         <div class="article-meta-info">
     <span class="article-date article-meta-item">
-        <i class="fas fa-edit"></i>&nbsp;2021-05-16 23:24:29
+        <i class="fas fa-edit"></i>&nbsp;2021-05-16 23:30:18
     </span>
     
     
@@ -173,7 +173,7 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fas fa-file-word"></i>&nbsp;<span>25 Words</span>
+            <i class="fas fa-file-word"></i>&nbsp;<span>160 Words</span>
         </span>
     
     
@@ -190,8 +190,24 @@
         
 
         <div class="article-content markdown-body">
-            <h1 id="JavaScript-splice"><a href="#JavaScript-splice" class="headerlink" title="JavaScript splice"></a>JavaScript splice</h1><p>splice() 方法向/从数组中添加/删除项目，然后返回被删除的项目。</p>
-<p><img src="/images/typora-user-images/image-20210506121711479.png"></p>
+            <pre><code>let i = 0
+for(i = 0; i&lt;6; i++)&#123;
+  setTimeout(()=&gt;&#123;
+    console.log(i)
+  &#125;,0)
+&#125; // 6 6 6 6 6 6
+</code></pre>
+<p>结果：同时输出6个6</p>
+<p>setTimeout是异步执行，也即每一次for循环执行一次，setTimeout执行一次，但里面的setTimeout并没有立即被执行，而是等到for循环结束，再执行。</p>
+<pre><code>for(let i = 0; i&lt;6; i++)&#123;
+  setTimeout(()=&gt;&#123;
+    console.log(i)
+  &#125;,0)
+&#125; // 0 1 2 3 4 5
+</code></pre>
+<p>结果：同时输出0 1 2 3 4 5</p>
+<p>let声明的 i，运行环境中 i 的值是每一个循环创建匿名函数时候的 i</p>
+<p>因为let声明只在<strong>代码块</strong>中有效</p>
 
         </div>
 
@@ -200,29 +216,14 @@
         
             <div class="article-nav">
                 
-                    <div class="article-prev">
-                        <a class="prev"
-                           rel="prev"
-                           href="/2021/05/16/JavaScrip%E5%AF%B9%E8%B1%A1%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/"
-                        >
-                            <span class="left arrow-icon flex-center">
-                              <i class="fas fa-chevron-left"></i>
-                            </span>
-                            <span class="title flex-center">
-                                <span class="post-nav-title-item">JavaScrip对象基本用法</span>
-                                <span class="post-nav-item">Prev posts</span>
-                            </span>
-                        </a>
-                    </div>
-                
                 
                     <div class="article-next">
                         <a class="next"
                            rel="next"
-                           href="/2021/05/16/computed%E5%92%8Cwatch%E7%9A%84%E5%8C%BA%E5%88%AB/"
+                           href="/2021/05/16/JavaScrip%E5%AF%B9%E8%B1%A1%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/"
                         >
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">vue中 computed和watch的区别</span>
+                                <span class="post-nav-title-item">JavaScrip对象基本用法</span>
                                 <span class="post-nav-item">Next posts</span>
                             </span>
                             <span class="right arrow-icon flex-center">
@@ -331,7 +332,7 @@
         <aside class="page-aside">
             <div class="post-toc-wrap">
     <div class="post-toc">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#JavaScript-splice"><span class="nav-number">1.</span> <span class="nav-text">JavaScript splice</span></a></li></ol>
+        
     </div>
 </div>
         </aside>
